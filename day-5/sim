@@ -1,0 +1,121 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000254503bb3d0 .scope module, "fullsubtb" "fullsubtb" 2 1;
+ .timescale 0 0;
+v00000254504567b0_0 .var "a", 0 0;
+v0000025450455e50_0 .var "b", 0 0;
+v00000254504558b0_0 .var "bi", 0 0;
+v0000025450455950_0 .net "br", 0 0, L_00000254504047f0;  1 drivers
+v0000025450456710_0 .net "d", 0 0, L_00000254504041d0;  1 drivers
+S_0000025450406030 .scope module, "uut" "fullsub" 2 6, 3 1 0, S_00000254503bb3d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "bin";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "borrow";
+L_0000025450404320 .functor XOR 1, v00000254504567b0_0, v0000025450455e50_0, C4<0>, C4<0>;
+L_00000254504041d0 .functor XOR 1, L_0000025450404320, v00000254504558b0_0, C4<0>, C4<0>;
+L_0000025450404860 .functor NOT 1, v00000254504567b0_0, C4<0>, C4<0>, C4<0>;
+L_00000254504045c0 .functor AND 1, L_0000025450404860, v0000025450455e50_0, C4<1>, C4<1>;
+L_0000025450404780 .functor OR 1, L_00000254504045c0, L_0000025450456670, C4<0>, C4<0>;
+L_00000254504048d0 .functor AND 1, L_0000025450456170, v00000254504558b0_0, C4<1>, C4<1>;
+L_00000254504047f0 .functor OR 1, L_0000025450404780, L_00000254504048d0, C4<0>, C4<0>;
+v00000254503bba00_0 .net *"_ivl_0", 0 0, L_0000025450404320;  1 drivers
+v00000254503bbaa0_0 .net *"_ivl_10", 0 0, L_0000025450404780;  1 drivers
+v00000254503bb0f0_0 .net *"_ivl_13", 0 0, L_0000025450456170;  1 drivers
+v00000254503bb190_0 .net *"_ivl_14", 0 0, L_00000254504048d0;  1 drivers
+v00000254504061c0_0 .net *"_ivl_4", 0 0, L_0000025450404860;  1 drivers
+v0000025450406260_0 .net *"_ivl_6", 0 0, L_00000254504045c0;  1 drivers
+v0000025450406300_0 .net *"_ivl_9", 0 0, L_0000025450456670;  1 drivers
+v00000254504063a0_0 .net "a", 0 0, v00000254504567b0_0;  1 drivers
+v0000025450455ef0_0 .net "b", 0 0, v0000025450455e50_0;  1 drivers
+v00000254504565d0_0 .net "bin", 0 0, v00000254504558b0_0;  1 drivers
+v0000025450455c70_0 .net "borrow", 0 0, L_00000254504047f0;  alias, 1 drivers
+v0000025450456350_0 .net "diff", 0 0, L_00000254504041d0;  alias, 1 drivers
+L_0000025450456670 .arith/mult 1, v0000025450455e50_0, v00000254504558b0_0;
+L_0000025450456170 .reduce/nor v00000254504567b0_0;
+    .scope S_00000254503bb3d0;
+T_0 ;
+    %vpi_call 2 15 "$dumpfile", "fullsub.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000254503bb3d0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000254504567b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025450455e50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000254504558b0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 20 "$display", "%b %b %b | %b %b", v00000254504567b0_0, v0000025450455e50_0, v00000254504558b0_0, v0000025450456710_0, v0000025450455950_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000254504567b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025450455e50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000254504558b0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 24 "$display", "%b %b %b | %b %b", v00000254504567b0_0, v0000025450455e50_0, v00000254504558b0_0, v0000025450456710_0, v0000025450455950_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000254504567b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025450455e50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000254504558b0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 28 "$display", "%b %b %b | %b %b", v00000254504567b0_0, v0000025450455e50_0, v00000254504558b0_0, v0000025450456710_0, v0000025450455950_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000254504567b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025450455e50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000254504558b0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 32 "$display", "%b %b %b | %b %b", v00000254504567b0_0, v0000025450455e50_0, v00000254504558b0_0, v0000025450456710_0, v0000025450455950_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000254504567b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025450455e50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000254504558b0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 36 "$display", "%b %b %b | %b %b", v00000254504567b0_0, v0000025450455e50_0, v00000254504558b0_0, v0000025450456710_0, v0000025450455950_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000254504567b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025450455e50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000254504558b0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 40 "$display", "%b %b %b | %b %b", v00000254504567b0_0, v0000025450455e50_0, v00000254504558b0_0, v0000025450456710_0, v0000025450455950_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000254504567b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025450455e50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000254504558b0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 44 "$display", "%b %b %b | %b %b", v00000254504567b0_0, v0000025450455e50_0, v00000254504558b0_0, v0000025450456710_0, v0000025450455950_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000254504567b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025450455e50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000254504558b0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 48 "$display", "%b %b %b | %b %b", v00000254504567b0_0, v0000025450455e50_0, v00000254504558b0_0, v0000025450456710_0, v0000025450455950_0 {0 0 0};
+    %vpi_call 2 49 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "fullsubtb.v";
+    "fullsub.v";
