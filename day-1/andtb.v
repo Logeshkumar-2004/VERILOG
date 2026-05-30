@@ -12,6 +12,8 @@ and_gate uut(
 initial begin
     $dumpfile("anddump.vcd");
     $dumpvars(0, and_tb);
+    
+    //monitor("time=%0t , a=%b , b=%b , y=%b",$time,a,b,y);
 
 
     a=0; b=0;

@@ -15,8 +15,8 @@ module sr (
 );
 
 always @(posedge clk or posedge reset) begin
-    if (reset ==1 ) begin
-        q <= 4'b00000000;
+    if (reset == 1 ) begin
+        q <= 8'b00000000;
     end else begin
         q <= {q[6:0],ip};
         

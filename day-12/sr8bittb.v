@@ -20,10 +20,34 @@ initial begin
     #10;
     r=0;
     $display("SHIFT REGISTER 8 BIT ");
-    always @(*) begin
-        $displlay("time=%t | reset=%b | clk=%b | ip=%b | q=%b",)
-        
-    end
+
+    $monitor("time=%0t | reset=%b | clk=%b | ip=%b | q=%b",$time,r,clk,ip,q);
+
+    ip = 1;
+    #10;
+
+    ip = 0;
+    #10;
+
+     ip = 0;
+    #10;
+
+     ip = 0;
+    #10;
+
+     ip = 0;
+    #10;
+
+     ip = 0;
+    #10;
+
+     ip = 0;
+    #10;
+
+     ip = 0;
+    #10;
+
+    $finish;
 end
     
 endmodule
