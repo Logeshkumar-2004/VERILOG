@@ -16,6 +16,7 @@ initial begin
     $dumpfile("sr.vcd");
     $dumpvars(0,srtb);
     clk=0;
+    ip=0;
     r=1;
     #10;
     r=0;

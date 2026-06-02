@@ -16,11 +16,24 @@ initial begin
 
     a=0; b=1; s=0;
     #10
-    $display("%b %b %b %b", a,b,s,y);
+    $display("time= %0t i0=%b i1=%b sel=%b y=%b",$time, a,b,s,y);
+
+    a=1; b=0; s=0;
+    #10
+    $display("time= %0t i0=%b i1=%b sel=%b y=%b",$time, a,b,s,y);
+
+
+    a=0; b=1; s=1;
+    #10
+    $display("time= %0t i0=%b i1=%b sel=%b y=%b",$time, a,b,s,y);
+
+
 
     a=1; b=0; s=1;
     #10
-    $display("%b %b %b %b", a,b,s,y);
+    $display("time=%0t i0=%b i1=%b sel=%b y=%b",$time, a,b,s,y);
+
+    #50;
 
     $finish;
     

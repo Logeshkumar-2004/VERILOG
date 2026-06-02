@@ -3,6 +3,8 @@ module half_adder (
     output sum, carry
 
 );
-    assign sum = a ^ b;
-    assign carry = a & b;
+    /*assign sum = a ^ b;
+    assign carry = a & b; */
+
+    assign {carry,sum} = a +b;
 endmodule

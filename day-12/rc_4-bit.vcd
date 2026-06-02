@@ -1,22 +1,20 @@
 $date
-	Sat May 30 21:03:06 2026
+	Sat May 30 21:48:02 2026
 $end
 $version
 	Icarus Verilog
 $end
 $timescale
-	1s
+	1ps
 $end
-$scope module srtb $end
+$scope module rc_tb $end
 $var wire 4 ! q [3:0] $end
 $var reg 1 " clk $end
-$var reg 1 # ip $end
-$var reg 1 $ r $end
+$var reg 1 # r $end
 $scope module uut $end
 $var wire 1 " clk $end
-$var wire 1 # ip $end
-$var wire 1 $ reset $end
-$var reg 4 % q [3:0] $end
+$var wire 1 # reset $end
+$var reg 4 $ q [3:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -25,41 +23,41 @@ $dumpall
 $end
 #0
 $dumpvars
-b0 %
-1$
-0#
-0"
-b0 !
-$end
-#5
-1"
-#10
-0"
+b1 $
 1#
-0$
-#15
+0"
 b1 !
-b1 %
+$end
+#5000
 1"
-#20
+#10000
 0"
 0#
-#25
+#15000
 b10 !
-b10 %
+b10 $
 1"
-#30
+#20000
 0"
-1#
-#35
-b101 !
-b101 %
+#25000
+b100 !
+b100 $
 1"
-#40
+#30000
 0"
-#45
-b1011 !
-b1011 %
+#35000
+b1000 !
+b1000 $
 1"
-#50
+#40000
 0"
+#45000
+b1 !
+b1 $
+1"
+#50000
+0"
+#55000
+b10 !
+b10 $
+1"

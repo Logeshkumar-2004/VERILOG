@@ -1,5 +1,5 @@
 $date
-	Sat May 16 19:53:23 2026
+	Tue Jun 02 00:26:16 2026
 $end
 $version
 	Icarus Verilog
@@ -15,8 +15,8 @@ $var reg 1 $ b $end
 $scope module uut $end
 $var wire 1 # a $end
 $var wire 1 $ b $end
-$var wire 1 " borrow $end
 $var wire 1 ! diff $end
+$var wire 1 " borrow $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
