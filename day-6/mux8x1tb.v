@@ -1,5 +1,5 @@
 module muxtb ;
-reg a, b, c, d, e, f, g, h, s0, s1, s2 ;
+reg a, b, c, d, e, f, g, h, s0=0, s1=0, s2=0 ;
 wire y;
 
 mux uut (
@@ -20,6 +20,7 @@ mux uut (
 initial begin
     $dumpfile("mux8x1.vcd");
     $dumpvars(0, muxtb);
+    
 
     a=0; b=1; c=0; d=1; e=0; f=1; g=0; h=1;
     #10;

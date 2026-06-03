@@ -1,0 +1,105 @@
+$date
+	Wed Jun 03 19:26:56 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module p_adder_tb $end
+$var wire 8 ! s_8 [7:0] $end
+$var wire 4 " s_4 [3:0] $end
+$var wire 8 # c_8 [7:0] $end
+$var wire 4 $ c_4 [3:0] $end
+$var reg 1 % a $end
+$var reg 1 & b $end
+$var reg 1 ' cin $end
+$scope module uut1 $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 4 ( carry [3:0] $end
+$var wire 1 ' cin $end
+$var wire 4 ) sum [3:0] $end
+$var parameter 32 * WIDTH $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 8 + carry [7:0] $end
+$var wire 1 ' cin $end
+$var wire 8 , sum [7:0] $end
+$var parameter 32 - WIDTH $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 -
+b100 *
+$end
+#0
+$dumpvars
+b0 ,
+b0 +
+b0 )
+b0 (
+0'
+0&
+0%
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b1 "
+b1 )
+b1 !
+b1 ,
+1'
+#20
+0'
+1&
+#30
+b1 $
+b1 (
+b1 #
+b1 +
+b0 "
+b0 )
+b0 !
+b0 ,
+1'
+#40
+b0 $
+b0 (
+b0 #
+b0 +
+b1 "
+b1 )
+b1 !
+b1 ,
+0'
+0&
+1%
+#50
+b1 $
+b1 (
+b1 #
+b1 +
+b0 "
+b0 )
+b0 !
+b0 ,
+1'
+#60
+0'
+1&
+#70
+b1 "
+b1 )
+b1 !
+b1 ,
+1'
+#80

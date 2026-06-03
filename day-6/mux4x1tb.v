@@ -1,5 +1,5 @@
 module muxtb;
-reg a, b, c, d, s1, s0;
+reg a, b, c, d, s1=0, s0=0;
 wire y;
 
 muxd uut(
@@ -15,6 +15,7 @@ muxd uut(
 initial begin
     $dumpfile("mux4x1tb.vcd");
     $dumpvars(0, muxtb);
+    
 
     a=0; b=1; c=0; d=1;
     #10;

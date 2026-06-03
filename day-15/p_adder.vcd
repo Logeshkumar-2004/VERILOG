@@ -1,0 +1,53 @@
+$date
+	Wed Jun 03 19:20:58 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module p_adder_tb $end
+$var wire 1 ! c $end
+$var wire 1 " s $end
+$var reg 4 # a_4 [3:0] $end
+$var reg 8 $ a_8 [7:0] $end
+$var reg 4 % b_4 [3:0] $end
+$var reg 8 & b_8 [7:0] $end
+$scope module uut1 $end
+$var wire 4 ' a [3:0] $end
+$var wire 4 ( b [3:0] $end
+$var wire 1 ! carry $end
+$var wire 1 " sum $end
+$var parameter 32 ) WIDTH $end
+$upscope $end
+$scope module uut2 $end
+$var wire 8 * a [7:0] $end
+$var wire 8 + b [7:0] $end
+$var wire 1 ! carry $end
+$var wire 1 " sum $end
+$var parameter 32 , WIDTH $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 ,
+b100 )
+$end
+#0
+$dumpvars
+bx +
+bx *
+b101 (
+b1010 '
+bx &
+b101 %
+bx $
+b1010 #
+x"
+x!
+$end
+#20
+b110010 $
+b110010 *
