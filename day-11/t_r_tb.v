@@ -14,7 +14,7 @@ t_ff_r uut(
 always #5 clk = ~clk;
 
 initial begin
-    $dumpfile("tff_rest.vcd");
+    $dumpfile("tff_reset.vcd");
     $dumpvars(0, tff_r);
     clk=0;
     $display("'/ T filopflop with reset button");

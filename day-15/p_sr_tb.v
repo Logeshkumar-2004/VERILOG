@@ -4,7 +4,7 @@ reg clk, r, ip;
 wire [3:0]q_4;
 wire [7:0]q_8;
 
-p_sr #(4)  uut1 (
+p_sr #(4) uut1 (
     .clk(clk),
     .reset(r),
     .ip(ip),
@@ -22,11 +22,14 @@ always #5 clk = ~clk;
 
 
 initial begin
-    clk=0;
+    
     r=1;
+    clk=0;
     ip=0;
     #10;
+
     r=0;
+    
 
     ip=1;
     #10;
@@ -45,7 +48,7 @@ initial begin
 end
 initial begin
 
-    $monitor("time=%0t | reset=%b | clk=%b | q_4=%b |q_8=%b",$time,r,clk,q_4,q_8);
+    $monitor("time=%0t | reset=%b | clk=%b|ip=%b | q_4=%b |q_8=%b",$time,r,clk,ip,q_4,q_8);
     
 end
 

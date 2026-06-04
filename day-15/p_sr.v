@@ -17,7 +17,7 @@ module p_sr #(
 );
 
 always @(posedge clk or posedge reset) begin
-    if (reset==0) begin
+    if (reset==1) begin
         q <= 0;
     end else begin
         q <= {q[WIDTH-2:0],ip};

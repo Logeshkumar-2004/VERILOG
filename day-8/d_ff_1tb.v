@@ -1,7 +1,7 @@
 module dtb ;
 
 reg d, clk;
-wire q;
+wire q ;
 
 seq_d  uut(
       .d(d),
@@ -16,7 +16,8 @@ initial begin
     $dumpfile("d_ff_1.vcd");
     $dumpvars(0, dtb);
 
-    clk=0; 
+    clk=0;
+    
 
     d=0;
     #10;

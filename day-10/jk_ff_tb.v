@@ -21,9 +21,11 @@ jkff uut(
 
         $display("jk filpflop");
         
-        $monitor("time =%0t | clk= %b |j= %b |k= %b |q= %b ",$time,clk,j,k,q);
         
         clk =0;
+        
+        $monitor("time =%0t | clk= %b |j= %b |k= %b |q= %b ",$time,clk,j,k,q);
+        
     
         
         j=0; k=0;

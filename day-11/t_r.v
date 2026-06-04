@@ -5,7 +5,7 @@ module t_ff_r(
  always @(posedge clk) begin
 
     if (reset == 0) begin
-     if (t) begin
+     if (t ==0) begin
         q <= ~q ;        
      end    
      else begin

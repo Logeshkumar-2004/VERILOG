@@ -17,12 +17,16 @@ always #5 clk = ~clk;
 initial begin
     $dumpfile("dff_reset.vcd");
     $dumpvars(0,dff_tb);
-      $monitor("%0t|%b|%b|%b|%b",$time,reset,clk,d,q);
-
+    $monitor("%0t|%b|%b|%b|%b",$time,reset,clk,d,q);
+      
     clk=0;
     reset =1;
     
-    #5 reset = 0;
+    #5;
+    
+
+    reset = 0;
+   
     
 
     d=0;
