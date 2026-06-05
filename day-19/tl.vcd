@@ -1,0 +1,98 @@
+$date
+	Fri Jun 05 19:01:18 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module traffic_light_tb $end
+$var wire 1 ! y $end
+$var wire 1 " r $end
+$var wire 1 # g $end
+$var reg 1 $ clk $end
+$var reg 1 % reset $end
+$scope module uut $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var parameter 2 & green $end
+$var parameter 2 ' red $end
+$var parameter 2 ( yellow $end
+$var reg 1 # GREEN $end
+$var reg 1 " RED $end
+$var reg 1 ! YELLOW $end
+$var reg 2 ) next_state [1:0] $end
+$var reg 2 * state [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10 (
+b0 '
+b1 &
+$end
+#0
+$dumpvars
+b0 *
+b1 )
+1%
+0$
+0#
+1"
+0!
+$end
+#5000
+1$
+#10000
+0$
+0%
+#15000
+b10 )
+1#
+0"
+b1 *
+1$
+#20000
+0$
+#25000
+1!
+0#
+b0 )
+b10 *
+1$
+#30000
+0$
+#35000
+b1 )
+1"
+0!
+b0 *
+1$
+#40000
+0$
+#45000
+1#
+0"
+b10 )
+b1 *
+1$
+#50000
+0$
+#55000
+b0 )
+1!
+0#
+b10 *
+1$
+#60000
+0$
+#65000
+1"
+0!
+b1 )
+b0 *
+1$
+#70000
+0$
