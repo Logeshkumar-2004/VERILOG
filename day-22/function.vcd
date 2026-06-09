@@ -1,0 +1,72 @@
+$date
+	Sun Jun 07 12:10:33 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module f_and_tb $end
+$var wire 5 ! y [4:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$scope module uut $end
+$var wire 4 $ a [3:0] $end
+$var wire 4 % b [3:0] $end
+$var wire 5 & y [4:0] $end
+$scope function and_gate $end
+$var reg 4 ' ip_1 [3:0] $end
+$var reg 4 ( ip_2 [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b111 !
+b111 &
+b11 (
+b100 '
+b11 #
+b11 %
+b100 "
+b100 $
+#20
+b1010 !
+b1010 &
+b111 '
+b111 "
+b111 $
+#30
+b1000 !
+b1000 &
+b100 (
+b100 '
+b100 #
+b100 %
+b100 "
+b100 $
+#40
+b11 !
+b11 &
+b11 (
+b0 '
+b11 #
+b11 %
+b0 "
+b0 $
+#50

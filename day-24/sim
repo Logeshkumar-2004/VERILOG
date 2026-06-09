@@ -1,0 +1,129 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000023adc39bbf0 .scope module, "self_check_full_adder_tb" "self_check_full_adder_tb" 2 1;
+ .timescale 0 0;
+v0000023adc453b70_0 .var "a", 2 0;
+v0000023adc4537b0_0 .var "b", 2 0;
+v0000023adc453e90_0 .net "carry", 3 0, L_0000023adc453d50;  1 drivers
+v0000023adc454110_0 .var "cin", 2 0;
+v0000023adc453710_0 .var/i "i", 31 0;
+v0000023adc4541b0_0 .var/i "j", 31 0;
+v0000023adc453850_0 .var/i "k", 31 0;
+v0000023adc4544d0_0 .net "sum", 3 0, L_0000023adc453df0;  1 drivers
+S_0000023adc39b590 .scope module, "uut" "full_adder" 2 12, 3 1 0, S_0000023adc39bbf0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "a";
+    .port_info 1 /INPUT 3 "b";
+    .port_info 2 /INPUT 3 "cin";
+    .port_info 3 /OUTPUT 4 "sum";
+    .port_info 4 /OUTPUT 4 "carry";
+L_0000023adc4a68a0 .functor BUFT 1, C4<00000>, C4<0>, C4<0>, C4<0>;
+v0000023adc4234d0_0 .net *"_ivl_10", 4 0, L_0000023adc4a68a0;  1 drivers
+v0000023adc39b720_0 .net *"_ivl_11", 7 0, L_0000023adc453990;  1 drivers
+v0000023adc39b7c0_0 .net *"_ivl_13", 7 0, L_0000023adc453fd0;  1 drivers
+L_0000023adc4a68e8 .functor BUFT 1, C4<00000>, C4<0>, C4<0>, C4<0>;
+v0000023adc422ce0_0 .net *"_ivl_16", 4 0, L_0000023adc4a68e8;  1 drivers
+v0000023adc422d80_0 .net *"_ivl_17", 7 0, L_0000023adc454390;  1 drivers
+v0000023adc422e20_0 .net *"_ivl_3", 7 0, L_0000023adc454570;  1 drivers
+L_0000023adc4a6858 .functor BUFT 1, C4<00000>, C4<0>, C4<0>, C4<0>;
+v0000023adc422ec0_0 .net *"_ivl_6", 4 0, L_0000023adc4a6858;  1 drivers
+v0000023adc422f60_0 .net *"_ivl_7", 7 0, L_0000023adc4538f0;  1 drivers
+v0000023adc423000_0 .net "a", 2 0, v0000023adc453b70_0;  1 drivers
+v0000023adc4230a0_0 .net "b", 2 0, v0000023adc4537b0_0;  1 drivers
+v0000023adc447040_0 .net "carry", 3 0, L_0000023adc453d50;  alias, 1 drivers
+v0000023adc454250_0 .net "cin", 2 0, v0000023adc454110_0;  1 drivers
+v0000023adc4542f0_0 .net "sum", 3 0, L_0000023adc453df0;  alias, 1 drivers
+L_0000023adc453d50 .part L_0000023adc454390, 4, 4;
+L_0000023adc453df0 .part L_0000023adc454390, 0, 4;
+L_0000023adc454570 .concat [ 3 5 0 0], v0000023adc453b70_0, L_0000023adc4a6858;
+L_0000023adc4538f0 .concat [ 3 5 0 0], v0000023adc4537b0_0, L_0000023adc4a68a0;
+L_0000023adc453990 .arith/sum 8, L_0000023adc454570, L_0000023adc4538f0;
+L_0000023adc453fd0 .concat [ 3 5 0 0], v0000023adc454110_0, L_0000023adc4a68e8;
+L_0000023adc454390 .arith/sum 8, L_0000023adc453990, L_0000023adc453fd0;
+    .scope S_0000023adc39bbf0;
+T_0 ;
+    %vpi_call 2 21 "$dumpfile", "self_check_full_adder.vcd" {0 0 0};
+    %vpi_call 2 22 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000023adc39bbf0 {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000023adc453710_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0000023adc453710_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000023adc4541b0_0, 0, 32;
+T_0.2 ;
+    %load/vec4 v0000023adc4541b0_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_0.3, 5;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000023adc453850_0, 0, 32;
+T_0.4 ;
+    %load/vec4 v0000023adc453850_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_0.5, 5;
+    %load/vec4 v0000023adc453710_0;
+    %pad/s 3;
+    %store/vec4 v0000023adc453b70_0, 0, 3;
+    %load/vec4 v0000023adc4541b0_0;
+    %pad/s 3;
+    %store/vec4 v0000023adc4537b0_0, 0, 3;
+    %load/vec4 v0000023adc453850_0;
+    %pad/s 3;
+    %store/vec4 v0000023adc454110_0, 0, 3;
+    %delay 10, 0;
+    %load/vec4 v0000023adc453e90_0;
+    %load/vec4 v0000023adc4544d0_0;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0000023adc453b70_0;
+    %pad/u 8;
+    %load/vec4 v0000023adc4537b0_0;
+    %pad/u 8;
+    %add;
+    %load/vec4 v0000023adc454110_0;
+    %pad/u 8;
+    %add;
+    %cmp/e;
+    %jmp/0xz  T_0.6, 4;
+    %vpi_call 2 34 "$display", "PASS time=%0t | a=%b | b=%b | c_in=%b | sum=%b |carry=%b |", $time, v0000023adc453b70_0, v0000023adc4537b0_0, v0000023adc454110_0, v0000023adc4544d0_0, v0000023adc453e90_0 {0 0 0};
+    %jmp T_0.7;
+T_0.6 ;
+    %vpi_call 2 36 "$display", "NO time=%0t | a=%b | b=%b | c_in=%b | sum=%b |carry=%b |", $time, v0000023adc453b70_0, v0000023adc4537b0_0, v0000023adc454110_0, v0000023adc4544d0_0, v0000023adc453e90_0 {0 0 0};
+T_0.7 ;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0000023adc453850_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %store/vec4 v0000023adc453850_0, 0, 32;
+    %jmp T_0.4;
+T_0.5 ;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0000023adc4541b0_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %store/vec4 v0000023adc4541b0_0, 0, 32;
+    %jmp T_0.2;
+T_0.3 ;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0000023adc453710_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %store/vec4 v0000023adc453710_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %vpi_call 2 43 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "self_check_full_adder_tb.v";
+    "self_check_full_adder.v";

@@ -1,0 +1,138 @@
+$date
+	Sun Jun 07 20:50:42 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module loop_2bit_adder $end
+$var wire 3 ! sum [2:0] $end
+$var reg 2 " a [1:0] $end
+$var reg 2 # b [1:0] $end
+$var integer 32 $ i [31:0] $end
+$var integer 32 % j [31:0] $end
+$scope module uut $end
+$var wire 2 & a [1:0] $end
+$var wire 2 ' b [1:0] $end
+$var wire 3 ( sum [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b1 !
+b1 (
+b1 #
+b1 '
+b1 %
+#20
+b10 !
+b10 (
+b10 #
+b10 '
+b10 %
+#30
+b11 !
+b11 (
+b11 #
+b11 '
+b11 %
+#40
+b0 #
+b0 '
+b1 !
+b1 (
+b1 "
+b1 &
+b1 $
+b0 %
+#50
+b10 !
+b10 (
+b1 #
+b1 '
+b1 %
+#60
+b11 !
+b11 (
+b10 #
+b10 '
+b10 %
+#70
+b100 !
+b100 (
+b11 #
+b11 '
+b11 %
+#80
+b0 #
+b0 '
+b10 !
+b10 (
+b10 "
+b10 &
+b10 $
+b0 %
+#90
+b11 !
+b11 (
+b1 #
+b1 '
+b1 %
+#100
+b100 !
+b100 (
+b10 #
+b10 '
+b10 %
+#110
+b101 !
+b101 (
+b11 #
+b11 '
+b11 %
+#120
+b0 #
+b0 '
+b11 !
+b11 (
+b11 "
+b11 &
+b11 $
+b0 %
+#130
+b100 !
+b100 (
+b1 #
+b1 '
+b1 %
+#140
+b101 !
+b101 (
+b10 #
+b10 '
+b10 %
+#150
+b110 !
+b110 (
+b11 #
+b11 '
+b11 %
+#160
+b100 $
+b100 %

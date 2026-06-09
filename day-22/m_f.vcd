@@ -1,0 +1,66 @@
+$date
+	Sun Jun 07 12:43:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module m_f_tb $end
+$var wire 8 ! y [7:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$scope module uut $end
+$var wire 4 $ a [3:0] $end
+$var wire 4 % b [3:0] $end
+$var wire 8 & y [7:0] $end
+$scope function multiplication $end
+$var reg 4 ' ta [3:0] $end
+$var reg 4 ( tb [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b1010 !
+b1010 &
+b1010 (
+b1 '
+b1010 #
+b1010 %
+b1 "
+b1 $
+#20
+b1110 !
+b1110 &
+b111 (
+b10 '
+b111 #
+b111 %
+b10 "
+b10 $
+#30
+b1001 !
+b1001 &
+b11 (
+b11 '
+b11 #
+b11 %
+b11 "
+b11 $
+#40

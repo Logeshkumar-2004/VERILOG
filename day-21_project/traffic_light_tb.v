@@ -26,7 +26,7 @@ initial begin
     #30;
    
     enable = 0;
-    #60;
+    #10;
 
     enable = 1;
     #30;
