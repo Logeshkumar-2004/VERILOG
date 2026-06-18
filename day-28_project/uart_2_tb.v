@@ -1,13 +1,13 @@
 module uart_tb;
 reg clk; 
-reg r; 
+reg reset; 
 reg start;
 reg [7:0]data_in ;
 wire busy;
 wire tx;
 
 uart uut(
-    .reset(r),
+    .reset(reset),
     .clk(clk),
     .start(start),
     .data_in(data_in),
@@ -18,7 +18,7 @@ uart uut(
     initial begin
         $dumpfile("uart.vcd");
         $dumpvars(0,uart_tb);
-        $monitor("time=%0t | reset=%b | tx =%b | busy =%b",$time,r,tx,busy);
+        $monitor("time=%0t | reset=%b | tx =%b | busy =%b",$time,reset,tx,busy);
 
 ///10100101
 
@@ -26,14 +26,13 @@ uart uut(
 
 
         clk = 0;
-        r = 1;
+        reset = 1;
         start = 0;
+        $display("10100101");
         data_in = 8'b10100101;
-        #10;
-        r=0;
-        start = 1;
-        #10;
-        start = 0;
+        #10 reset=0;
+        #10 start = 1;
+        #10 start = 0;
 
         #150 ;
 
@@ -41,14 +40,12 @@ uart uut(
         
         $display(" 11001100");
         clk = 0;
-        r = 1;
+        reset= 1;
         start = 0;
         data_in = 8'b11001100;
-        #10;
-        r=0;
-        start = 1;
-        #10;
-        start = 0;
+        #10 reset=0;
+        #10 start = 1;
+        #10 start = 0;
 
         #150 ;
 
@@ -56,14 +53,12 @@ uart uut(
          $display(" 11110000");
 
         clk = 0;
-        r = 1;
+        reset = 1;
         start = 0;
         data_in = 8'b11110000;
-        #10;
-        r=0;
-        start = 1;
-        #10;
-        start = 0;
+        #10 reset=0;
+        #10 start = 1;
+        #10 start = 0;
 
         #150 ;
         $finish;

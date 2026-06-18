@@ -2,23 +2,23 @@ module ALU_tb;
 reg [3:0]a;
 reg [3:0]b;
 reg [3:0]sel;
-wire [3:0]y;
+wire [3:0]result;
 reg [3:0]expect;
 
 ALU uut(
     .a(a),
     .b(b),
     .sel(sel),
-    .y(y)
+    .y(result)
 );
 task checker_result;
 begin
     
 
-if (y == expect ) begin
-    $display("PASS time=%0t | a=%b | b=%b |expect = %b |result=%b |",$time ,a,b,expect,y );
+if (result == expect ) begin
+    $display("PASS time=%0t | a=%0d | b=%0d |expect = %0d,result=%0d ",$time ,a,b,expect,result );
 end else begin
-    $display("FAIL time=%0t | a=%b | b=%b |expect = %b |result=%b |",$time ,a,b,expect,y);
+    $display("FAIL time=%0t | a=%0d | b=%0d |expect = %0d,result=%0d ",$time ,a,b,expect,result);
 end
 end
 endtask

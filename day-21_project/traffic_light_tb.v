@@ -1,16 +1,16 @@
 
 module traffic_light_tb;
 reg clk , enable,reset;
-wire r , g , y ,w;
+wire red , green , yellow ,walk;
 
 e_tl uut(
     .clk(clk),
     .reset(reset),
     .enable(enable),
-    .RED(r),
-    .YELLOW(y),
-    .GREEN(g),
-    .WALK(w)
+    .RED(red),
+    .YELLOW(yellow),
+    .GREEN(green),
+    .WALK(walk)
 );
 
 always #5 clk = ~clk;
@@ -20,7 +20,7 @@ initial begin
      enable = 0;
      reset=1;
      #10;
-      $monitor("time =%0t |reset=%b| enable=%b | clk=%b | red=%b | green=%b | yellow=%b | walk=%b",$time,reset,enable,clk,r,g,y,w);
+      $monitor("time =%0t |reset=%b| enable=%b | clk=%b | red=%b | green=%b | yellow=%b | walk=%b",$time,reset,enable,clk,red,green,yellow,walk);
      reset=0;
     enable = 1;
     #30;
@@ -37,7 +37,7 @@ end
 
 
 initial begin
-    $dumpfile("e_tl.vcd");
+    $dumpfile("traffic_light.vcd");
     $dumpvars(0,traffic_light_tb);
 end    
 
